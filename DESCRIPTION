@@ -3,7 +3,7 @@ Type: Package
 Title: MATH4753BART0039
 Version: 0.1.0
 Author: Camron Bartlow
-Maintainer: Camron Bartlow <csbartlow@ou.edu>
+Maintainer: Camron Bartlow <csbartlow99@ou.edu>
 Description: Useful tools for MATH 4753 Applied Statistical Methods.
 License: GPL-2
 Encoding: UTF-8
