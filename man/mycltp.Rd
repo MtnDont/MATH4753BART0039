@@ -2,7 +2,7 @@
 % Please edit documentation in R/mycltp.R
 \name{mycltp}
 \alias{mycltp}
-\title{Title}
+\title{CLT Poisson}
 \usage{
 mycltp(n, iter, lambda = 10, ...)
 }
@@ -13,11 +13,12 @@ mycltp(n, iter, lambda = 10, ...)
 
 \item{lambda}{Lambda in Poisson Distribution}
 
-\item{...}{}
+\item{...}{Further graphical parameters}
 }
 \value{
-
+Returns a histogram of the sample mean, a barplot of a sampled y,
+and a probability function for poisson distribution
 }
 \description{
-Title
+CLT Poisson
 }

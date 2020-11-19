@@ -8,6 +8,8 @@ quadPlot(x, qlm)
 }
 \arguments{
 \item{x}{The diameter}
+
+\item{qlm}{A quadratic linear model}
 }
 \value{
 Response i.e. estimated Height
@@ -16,5 +18,5 @@ Response i.e. estimated Height
 A function for plotting a quadratic
 }
 \examples{
-\dontrun{quad.lm<-lm(y~x,data=df); myplot(x=15, qlm=quad.lm)}
+\dontrun{quad.lm<-lm(y~x,data=df); quadPlot(x=15, qlm=quad.lm)}
 }

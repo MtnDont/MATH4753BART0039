@@ -1,18 +1,16 @@
-## CLT Poisson
-## CLT will work with discrete or continuous distributions
-## my Central Limit Function
-## Notice that I have assigned default values which can be changed when the function is called
-#' Title
+#' @title CLT Poisson
 #'
 #' @param n Sample Size
 #' @param iter Iterations
 #' @param lambda Lambda in Poisson Distribution
-#' @param ...
+#' @param ... Further graphical parameters
 #'
-#' @return
+#' @return Returns a histogram of the sample mean, a barplot of a sampled y,
+#' and a probability function for poisson distribution
 #' @export
 #'
-#' @examples
+#' @example
+#' \dontrun{mycltp(n=2,iter=10000, lambda=4)}
 mycltp = function(n, iter, lambda=10, ...) {
 
   ## r-random sample from the Poisson

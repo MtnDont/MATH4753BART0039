@@ -1,0 +1,89 @@
+---
+title: "R package"
+author: "Camron Bartlow"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: yes
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+My package is called **MATH4753BART0039** and I have packaged and documented
+functions `myboot2`, `myci`, `mycltp`, `mymaxlik`, `myncurve`, `mysample`, and
+`quadPlot`.
+
+Your actual package name and functions will obviously be called something else.
+
+# First function
+```{r}
+x <- rnorm(20, 10, 10)
+x
+MATH4753BART0039::myboot2(x = x)
+```
+
+The function returns a histogram of bootstrap sample statistics based on a given
+dataset *x*, that shows the range of the confidence intervals, and showing the
+mean estimate.
+
+# Second function
+```{r}
+x <- rnorm(20, 10, 10)
+x
+MATH4753BART0039::myci(x)
+```
+
+The function returns a 95% confidence interval for a given distribution *x*.
+
+# Third function
+```{r}
+MATH4753BART0039::mycltp(n=2,iter=10000, lambda=4)
+```
+
+The function returns a histogram of the sample mean, a barplot of a sampled y,
+and a probability function for poisson distribution given a sample size *n*,
+number of iterations *iter*, and the lambda of the Poisson distribution *lambda*.
+
+# Forth function
+```{r}
+logbin=function(x,param) log(dbinom(x,prob=param,size=20))
+logpoiss=function(x,param) log(dpois(x,lambda=param)) 
+logexp=function(x,param) log(dexp(x,rate=param))
+max = MATH4753BART0039::mymaxlik(x=c(3,3,4,3,4,5,5,4),param=seq(0,1,length=1000),lfun=logbin,main="Binomial",cex.main=1)
+```
+
+The function returns a logarithmic graph based on a given set distribution *x*, sequence of steps *param*, given logarithmic function *lfun*, and any other graphical parameters *...*, with a line marking the maximum likelihood.
+
+# Fifth function
+```{r}
+MATH4753BART0039::myncurve(mu=10,sigma=5,a=6)
+```
+
+The function displays the curve , shaded area between the curve and x axis from $-\infty$ to $x=a$ and calculates the area(probability) in a list.
+
+# Sixth function
+```{r}
+MATH4753BART0039::mysample(n=1000, iter=3, time=1)
+```
+
+The function generates an *iter* number of barplots of *n* sample size, with a *time* second delay between each barplot
+
+# Seventh function
+```{r}
+fireData <- MATH4753BART0039::fire
+quad.lm <- lm(fireData$DAMAGE~fireData$DISTANCE + I(fireData$DISTANCE^2), data=fireData)
+MATH4753BART0039::quadPlot(x=15, qlm=quad.lm)
+```
+
+The function returns estimate of y at x of a given linear model lm.
+
+# The github repository
+
+This is the address of my GITHUB repository:
+<https://github.com/MtnDont/MATH4753BART0039.git>
+

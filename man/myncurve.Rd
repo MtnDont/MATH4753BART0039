@@ -20,3 +20,6 @@ from -inf to x = a, and prints the probability P(X<=a)
 \description{
 Function for printing probability on curves
 }
+\examples{
+\dontrun{myncurve(mu=10,sigma=5,a=6)}
+}

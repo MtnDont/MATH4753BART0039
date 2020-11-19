@@ -1,4 +1,4 @@
-#' Max Likelihood function
+#' @title Max Likelihood function
 #'
 #' @param lfun Logarithmic function input
 #' @param x Set of data
@@ -9,6 +9,10 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{logbin=function(x,param) log(dbinom(x,prob=param,size=20));
+#' logpoiss=function(x,param) log(dpois(x,lambda=param));
+#' logexp=function(x,param) log(dexp(x,rate=param));
+#' mymaxlik(x=c(3,3,4,3,4,5,5,4),param=seq(0,1,length=1000),lfun=logbin,main="Binomial",cex.main=1)}
 mymaxlik = function(lfun, x, param, ...) {
   # how many param values are there?
   np = length(param)

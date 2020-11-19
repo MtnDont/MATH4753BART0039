@@ -10,7 +10,8 @@
 #' @return Returns a histogram of bootstrap sample statistics and possible a list of the quantile, function, and samples.
 #' @export
 #'
-#' @examples
+#' @example
+#' \dontrun{x <- rnorm(20, 10, 10); myboot2(x = x)}
 myboot2 <- function(iter=10000, x, fun="mean", alpha=0.05, cx=1.5, ...) {  #Notice where the ... is repeated in the code
   n = length(x)   #sample size
 

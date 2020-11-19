@@ -6,6 +6,9 @@
 #'
 #' @return Set of iter barplots
 #' @export
+#'
+#' @example
+#' \dontrun{mysample(n=20, iter=3, time=1)}
 mysample = function(n, iter=10, time=0.5) {
   for (i in 1:iter) {
     #make a sample
